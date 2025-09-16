@@ -1,0 +1,46 @@
+# feature_store.yaml - VastDB Feast Configuration
+project: vastdb_feast_example
+provider: local
+
+# VastDB Registry Configuration
+registry:
+  type: vastdb_registry
+  endpoint: "http://localhost:9090"
+  access_key: "your_access_key"
+  secret_key: "your_secret_key"
+  bucket_name: "feast"
+  schema_name: "registry"
+  ssl_verify: true
+
+# VastDB Online Store Configuration  
+online_store:
+  type: vastdb_online
+  endpoint: "http://localhost:9090"
+  access_key: "your_access_key"
+  secret_key: "your_secret_key"
+  bucket_name: "feast"
+  schema_name: "online_store"
+  ssl_verify: true
+
+# VastDB Offline Store Configuration
+offline_store:
+  type: vastdb_offline
+  endpoint: "http://localhost:9090"
+  access_key: "your_access_key"
+  secret_key: "your_secret_key"
+  bucket_name: "feast"
+  schema_name: "offline_store"
+  ssl_verify: true
+
+entity_key_serialization_version: 3
+
+# Optional: Enable feature logging
+flags:
+  enable_feast_usage_metrics: false
+  
+# Optional: Authentication settings
+auth:
+  type: oidc
+  client_id: "feast_client"
+  client_secret: "feast_secret"
+  auth_discovery_url: "https://auth.example.com"
