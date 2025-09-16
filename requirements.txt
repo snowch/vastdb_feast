@@ -1,0 +1,6 @@
+feast>=0.32.0
+vastdb>=0.1.0
+pandas>=1.5.0
+pyarrow>=12.0.0
+protobuf>=3.20.0
+pydantic>=1.10.0
